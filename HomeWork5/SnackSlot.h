@@ -6,13 +6,14 @@
 class SnackSlot
 {
 public:
-	SnackSlot();
 	SnackSlot(int slots);
+	~SnackSlot();
 	void addSnack(Snack *snack);
+	Snack** getSlot();
 private:
-	int size;
-	Snack *slot;
-	int index;
+	Snack **slots_ = nullptr;
+	int size_;
+	int index_;
 };
 
 #endif // !SNACKSLOT_H_SENTRY

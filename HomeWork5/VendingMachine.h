@@ -6,13 +6,13 @@
 class VendingMachine
 {
 public:
-	VendingMachine(int slotCount);
+	VendingMachine(const int slotCount);
 	int getEmptySlotsCount();
 	void addSlot(SnackSlot* slot);
 private:
-	SnackSlot* snack_slot;
-	int index;
-	int size;
+	SnackSlot** snack_slot_ = nullptr;
+	int index_;
+	int size_;
 };
 
 #endif // VENDINGMACHINE_H_SENTRY

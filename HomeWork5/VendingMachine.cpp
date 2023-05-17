@@ -3,18 +3,22 @@
 
 VendingMachine::VendingMachine(int slotCount)
 {
-	this->index = 0;
-	this->size = slotCount;
-	this->snack_slot = new SnackSlot[size];
+	index_ = 0;
+	size_ = slotCount;
+	snack_slot_ = new SnackSlot*[size_];
+	for (size_t i = 0; i < size_; i++)
+	{
+		snack_slot_[i] = nullptr;
+	}
 }
 
 int VendingMachine::getEmptySlotsCount()
 {
-	return this->size - this->index;
+	return size_ - index_;
 }
 
 void VendingMachine::addSlot(SnackSlot* slot)
 {
-	snack_slot[index] = *slot;
-	++index;
+	snack_slot_[index_] = slot;
+	++index_;
 }

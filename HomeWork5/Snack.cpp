@@ -5,10 +5,10 @@ Snack::Snack() = default;
 
 Snack::Snack(const string name)
 {
-	this->name = name;
+	name_ = name;
 }
 
 string Snack::getName()
 {
-	return this->name;
+	return name_;
 }

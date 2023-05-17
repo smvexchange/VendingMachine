@@ -13,7 +13,7 @@ public:
 	string getName();
 
 private:
-	string name;
+	string name_;
 };
 
 #endif // !SNACK_H_SENTRY
